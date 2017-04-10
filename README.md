@@ -7,6 +7,11 @@
 https://trello.com/b/75K8mzGL/codersonly-com
 
 ---
+# ERD
+
+https://drive.google.com/file/d/0B-OlbwKrJ7vQYWZEekRzNi1tem8/view?usp=sharing
+
+---
 
 For this group-project, you will be making a dating app.
 
