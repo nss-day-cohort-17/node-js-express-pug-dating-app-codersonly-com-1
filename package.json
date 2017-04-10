@@ -1,0 +1,36 @@
+{
+  "name": "coders-only",
+  "version": "1.0.0",
+  "description": "Dating website for coders",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-codersonly-com-1.git"
+  },
+  "keywords": [
+    "dating",
+    "coders"
+  ],
+  "author": "Westley Isbell, Charlie Crocker, Phillip Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-codersonly-com-1/issues"
+  },
+  "homepage": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-codersonly-com-1#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bookshelf": "^0.10.3",
+    "bookshelf-bcrypt": "^2.1.0",
+    "connect-session-knex": "^1.3.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^6.1.5",
+    "pug": "^2.0.0-beta11"
+  }
+}
