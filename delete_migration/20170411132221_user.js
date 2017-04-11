@@ -13,6 +13,8 @@ exports.up = function(knex, Promise) {
   })
 };
 
+///////////Do not user//////
+
 exports.down = function(knex, Promise) {
   return knex.schema
   .dropTable("users")
