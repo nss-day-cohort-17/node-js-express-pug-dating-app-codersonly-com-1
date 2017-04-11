@@ -1,0 +1,19 @@
+{
+  "name": "coders-only",
+  "description": "Dating website for coders",
+  "main": "app.js",
+  "authors": [
+    "Westley Isbell",
+    "Charlie Crocker",
+    "Phillip Lewis"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dating",
+    "coders"
+  ],
+  "homepage": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-codersonly-com-1",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
