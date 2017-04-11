@@ -1,5 +1,28 @@
 extends partials/layout.pug
 
 block content
-
-  h1 THE LOGIN VIEW
+    .heading
+        h1 login
+        if msg
+            h2= msg
+        .login-form
+            form(method="POST")
+                .form-group
+                    label(for='email') Email Address
+                    input.form-control#email(
+                    type='email'
+                    name='email'
+                    placeholder='a@b.com'
+                    required
+                )
+                .form-group
+                    label(for='password') Password
+                    input.form-control#password(
+                    type='password'
+                    name='password'
+                    placeholder='**********'
+                    required
+                )
+                .contact-form__submit
+                    a.btn.btn-danger.btn-lg(href='/') Cancel
+                input.btn.btn-success.btn-lg(type='submit' value='Login')
