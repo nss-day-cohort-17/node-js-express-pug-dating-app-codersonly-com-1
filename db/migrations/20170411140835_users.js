@@ -3,13 +3,14 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable("users", (table)=>{
     table.increments()
     table.string("name").notNullable()
-    table.string("profile_pic").notNullable()
-    table.string("sex_language").notNullable()
-    table.string("computer_type").notNullable()
-    table.string("password").notNullable()
     table.string("email").notNullable()
-    table.string("about_user").notNullable()
+    table.string("password").notNullable()
+    table.string("gender").notNullable()
+    table.string("sexyLanguage").notNullable()
     table.string("location").notNullable()
+    table.string("macOrPc").notNullable()
+    table.string("birthday").notNullable()
+    table.string("aboutUser").notNullable()
   })
 };
 
