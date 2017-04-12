@@ -4,7 +4,9 @@ module.exports = {
  development: {
    client: 'postgresql',
    connection: {
-     database: 'coders_only'
+     database: 'coders_only',
+     user:     'postgres',
+     password: 'postgres'
    },
    migrations: {
      directory: __dirname + '/db/migrations'
