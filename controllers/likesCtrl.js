@@ -8,5 +8,5 @@ module.exports.render = (req, res) => {
 
 Like.forge().fetchAll()
 .then(models => {
-  models.forEach(model => console.log(model.toJSON()))
+  // models.forEach(model => console.log(model.toJSON()))
 })

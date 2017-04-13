@@ -25,3 +25,10 @@ block content
       img.profile-img(src="https://lh4.ggpht.com/wKrDLLmmxjfRG2-E-k5L5BUuHWpCOe4lWRF7oVs1Gzdn5e5yvr8fj-ORTlBF43U47yI=w300")
       p Name
       p Location
+  each model in modelsArray
+    .col-md-4
+      a(href='/home')
+        img.profile-img(src= model.profile_pic)
+        p #{model.name}
+        p #{model.location}
+      button.btn.btn-success.btn-lg.profile-like_button--width.profile-like_button--bottom_padding Like?

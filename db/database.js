@@ -5,4 +5,4 @@ const bookshelf = require("bookshelf")(knex);
 
 bookshelf.plugin(require("bookshelf-bcrypt"));
 
-module.exports = { knex, bookshelf }             
+module.exports = { knex, bookshelf }
