@@ -27,7 +27,7 @@ block content
       p Location
   each model in modelsArray
     .col-md-4
-      a(href='/home')
+      a(href=`/profile/${model.id}`)
         img.profile-img(src= model.profile_pic)
         p #{model.name}
         p #{model.location}
