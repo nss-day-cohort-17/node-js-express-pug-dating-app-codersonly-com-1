@@ -1,11 +1,9 @@
-
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("users", (table)=>{
     table.increments()
     table.string("name").notNullable()
     table.string("email").notNullable()
     table.string("password").notNullable()
-    table.string("profile_pic").notNullable()
     table.string("gender").notNullable()
     table.string("sexyLanguage").notNullable()
     table.string("location").notNullable()
