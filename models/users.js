@@ -5,7 +5,7 @@ const { compare } = require("bcryptjs")
 
 const User = bookshelf.Model.extend({
   tableName: "users"
-})
+});
 
 // const User = bookshelf.Model.extend(
 //   { tableName: "users",

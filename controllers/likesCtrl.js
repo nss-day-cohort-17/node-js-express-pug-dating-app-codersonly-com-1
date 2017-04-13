@@ -6,7 +6,7 @@ module.exports.render = (req, res) => {
   res.render('likes')
 }
 
-Like.forge().fetchAll()
-.then(models => {
-  models.forEach(model => console.log(model.toJSON()))
-})
+// Like.forge().fetchAll()
+// .then(models => {
+//   models.forEach(model => console.log(model.toJSON()))
+// })
