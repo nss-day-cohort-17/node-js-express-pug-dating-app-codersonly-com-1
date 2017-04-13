@@ -10,3 +10,4 @@ Like.forge().fetchAll()
 .then(models => {
   // models.forEach(model => console.log(model.toJSON()))
 })
+
