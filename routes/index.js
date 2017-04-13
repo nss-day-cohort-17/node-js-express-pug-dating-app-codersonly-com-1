@@ -11,6 +11,15 @@ router.use(require('./likesRoute'));
 router.use(require('./homeRoute'));
 router.use(require('./profileRoute'));
 
+router.use( (req, res, next) => {
+  if( req.isAuthenticated()) {
+    then()
+  } else {
+    res.redirect('/login')
+  }
+})
 
+// move other routes below here when working
+// router.use(require('/logout'))
 
 module.exports = router

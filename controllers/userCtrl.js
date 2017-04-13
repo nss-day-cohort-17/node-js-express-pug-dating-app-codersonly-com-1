@@ -22,13 +22,19 @@ module.exports.create = ({body: {email, password, confirmation}}, res)=> {
   if (password === confirmation) {
     User.findOneByEmail(email)
     .then((user)=>{
-      if(user) return res.render("register", {msg: "Email is already registered"});
+      if(user) {
+        console.log("email is registered")
+        return res.render("register", {msg: "Email is already registered"});
+      }
+      console.log('making a user')
       return User.forge({email, password})
       .save()
       .then( ()=> {
+        console.log('did it work?')
         res.redirect("/")
       })
-      .catch((err)=>res.render("register", {msg: "An error has occured, please try again."}))
+      // .catch((err)=>res.render("register", {msg: "An error has occured, please try again."}))
+      .catch((err)=> console.log('save didnt work'))
     })
     .catch((err)=> res.render("register", {msg: "An error has occured, please try again."}))
   } else {
