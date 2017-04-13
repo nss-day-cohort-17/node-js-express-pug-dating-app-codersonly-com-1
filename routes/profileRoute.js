@@ -7,6 +7,6 @@ const { render } = require('../controllers/profileCtrl');
 
 const router = Router();
 
-router.get('/profile', render);
+router.get('/profile/:userId', render);
 
 module.exports = router;
