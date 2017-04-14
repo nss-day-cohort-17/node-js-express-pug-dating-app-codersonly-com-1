@@ -10,7 +10,8 @@ const User = bookshelf.Model.extend({
     comparePass: function (passwordStr) {
       console.log('password string from user', passwordStr)
       console.log('user', this.attributes)
-      return compare(passwordStr, this.attributes)
+      // return compare(passwordStr, this.attributes)
+      return compare(passwordStr, this.attributes.password)
     }
   }, {
     findOneByEmail: function(email) {

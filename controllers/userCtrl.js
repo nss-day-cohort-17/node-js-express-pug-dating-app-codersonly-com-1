@@ -3,6 +3,9 @@
 const User = require("../models/users")
 
 module.exports.render = (req, res) => {
+  //name, email, password, profile_pic, gender, sexyLanguage, location, macOrPc, birthday, aboutUser
+  // User.forge({name: 'test', email: 'test', password: 'test', profile_pic: 'test', gender: 'test', sexyLanguage: 'test', location: 'test', macOrPc: 'test', birthday: 'test', aboutUser: 'test'})
+
   res.render("register", {page: "Register"});
 }
 
@@ -29,6 +32,9 @@ module.exports.create = ({body: {email, password, confirmation}}, res)=> {
       console.log('making a user')
       // return User.forge({email, password})
       // id, name, email, password, profile_pic, gender, sexyLanguage, location, macOrPc, birthday, aboutUser
+      // User.forge({email: 'test3333', password: 'test3333'})
+        // .save()
+
       return User.forge({email: email, password: password})
       .save()
       .then( ()=> {
