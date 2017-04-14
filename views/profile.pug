@@ -3,3 +3,19 @@ extends partials/layout.pug
 block content
 
   h1 THE PROFILE VIEW
+
+  h3 #{userInfo.name}
+  img(src=userInfo.profile_pic)
+  h3 Location
+  p #{userInfo.location}
+  h3 Gender
+  p #{userInfo.gender}
+  h3 Age
+  p Calculate birth day here ok? #{userInfo.birthday}
+  h3 Tell us about yourself
+  p #{userInfo.aboutUser}
+  h3 Mac or PC?
+  p #{userInfo.macOrPc}
+  h3 Lets get personal
+  h4 If you could have sex with any programming language, what would that language be?
+  p #{userInfo.sexyLanguage}
