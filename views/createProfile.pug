@@ -1,0 +1,29 @@
+extends partials/layout.pug
+
+block content
+    h1 Stop being lonely, Register for Codersonly.com!
+    .register-form
+        form(method='POST')
+          .form-group
+              label(for='location') Location
+              input.form-control#location(type='text' name='name' placeholder='San Dimas, CA')
+          .form-group
+              label(for='gender') What is your Gender
+              input.form-control#gender(type='text' name='name' placeholder='Male, Female, or other')
+          .form-group
+              label(for='birthday') What is your Birthday?
+              input.form-control#birthday(type='date' name='name' placeholder='San Dimas, CA')
+          .form-group
+              label(for='macOrPC') Mac or PC?
+              input.form-control#macOrPC(type='text' name='name' placeholder='Mac, obviously!')
+          .form-group
+              label(for='sexyLanguage') If you could have sex with one programming language, what would it be?
+              input.form-control#sexyLanguage(type='text' name='name' placeholder='That NodeJS sure is sexy...')
+          .form-group
+              label(for='about') Tell us a little about yourself...
+              input.form-control#message(name='message' rows=5 placeholder='Comments')
+          .contact-form__submit
+              a.btn.btn-danger.btn-lg(href='/') Cancel
+              input.btn.btn-success.btn-lg(type='submit' value='Submit')
+
+            

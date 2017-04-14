@@ -9,22 +9,15 @@ module.exports.render = (req, res) => {
   res.render("register", {page: "Register"});
 }
 
-// User.forge().query({where: {id: 12}}).fetchAll()
-// .then(models => {
-//   models.forEach(model => console.log(model.toJSON()))
-// })
-
-
-
-// User.collection().fetch().then(function (collection) {
-//   console.log(collection)
-// })
 
 module.exports.create = ({body: {email, password, confirmation}}, res)=> {
   console.log({body: {email, password, confirmation}})
   if (password === confirmation) {
     User.findOneByEmail(email)
     .then((user)=>{
+
+
+      
       if(user) {
         console.log("email is registered")
         return res.render("register", {msg: "Email is already registered"});
@@ -36,6 +29,7 @@ module.exports.create = ({body: {email, password, confirmation}}, res)=> {
         // .save()
 
       return User.forge({email: email, password: password})
+
       .save()
       .then( ()=> {
         console.log('did it work?')
