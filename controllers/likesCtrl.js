@@ -12,5 +12,5 @@ module.exports.render = (req, res) => {
 //   // models.forEach(model => console.log(model.toJSON()))
 // })
 
-User.forge({email: 'test3333', password: 'test3333'})
-.save()
+// User.forge({email: 'test3333', password: 'test3333'})
+// .save()

@@ -12,13 +12,6 @@ const cookieParser = require('cookie-parser');
 const flash = require('express-flash');
 const { knex } = require('./db/database');
 
-const bodyParser = require('body-Parser');
-const passport = require('passport');
-const session = require('express-session');
-const KnexSessionStore = require('connect-session-knex')(session)
-const cookieParser = require('cookie-parser');
-const flash = require('express-flash');
-const { knex } = require('./db/database');
 const routes = require('./routes');
 
 
@@ -55,28 +48,7 @@ app.use(passport.session())
 //   app.locals.email = req.user && req.user.email
 // })
 
-app.use(cookieParser('secretecoders'));
-app.use(session({cookie:{maxAge: 6000}, secret: 'secretcoders'}))
-app.use(flash())
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(session({
-  store: new KnexSessionStore({
-    knex,
-    tablename: 'sessions'
-  }),
-  resave: false,
-  saveUninitialized: false,
-  secret: process.env.SESSION_SECRET || 'secret'
-}))
 
-require('./lib/passport-strategies')
-app.use(passport.initialize())
-app.use(passport.session())
-
-app.use((req, res, next)=> {
-  app.locals.email = req.user && req.user.email
-  next()
-})
 //must be placed after sessions
 app.use(express.static('public'));
 //access to all the routes and middlewares
@@ -109,7 +81,6 @@ app.use( (req, res) => {
 
 
 
-const port = process.evn.PORT || 3000;
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })
