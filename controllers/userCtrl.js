@@ -27,7 +27,9 @@ module.exports.create = ({body: {email, password, confirmation}}, res)=> {
         return res.render("register", {msg: "Email is already registered"});
       }
       console.log('making a user')
-      return User.forge({email, password})
+      // return User.forge({email, password})
+      // id, name, email, password, profile_pic, gender, sexyLanguage, location, macOrPc, birthday, aboutUser
+      return User.forge({email: email, password: password})
       .save()
       .then( ()=> {
         console.log('did it work?')
