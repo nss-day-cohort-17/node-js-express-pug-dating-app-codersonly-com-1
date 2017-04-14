@@ -10,6 +10,7 @@ router.use(require('./logoutRoute'));
 router.use(require('./likesRoute'));
 router.use(require('./homeRoute'));
 router.use(require('./profileRoute'));
+router.use(require('./createProfile'));
 
 
 

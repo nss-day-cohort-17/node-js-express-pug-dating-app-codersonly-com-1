@@ -6,16 +6,6 @@ module.exports.render = (req, res) => {
   res.render("register", {page: "Register"});
 }
 
-// User.forge().query({where: {id: 12}}).fetchAll()
-// .then(models => {
-//   models.forEach(model => console.log(model.toJSON()))
-// })
-
-
-
-// User.collection().fetch().then(function (collection) {
-//   console.log(collection)
-// })
 
 module.exports.create = ({body: {email, password, confirmation}}, res)=> {
   console.log({body: {email, password, confirmation}})
@@ -23,7 +13,10 @@ module.exports.create = ({body: {email, password, confirmation}}, res)=> {
     User.findOneByEmail(email)
     .then((user)=>{
       if(user) return res.render("register", {msg: "Email is already registered"});
-      return User.forge({email, password})
+      return User.forge({
+                        email,
+                        password
+                      })
       .save()
       .then( ()=> {
         res.redirect("/")
